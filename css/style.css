@@ -1,0 +1,12 @@
+@import "reset.css";
+@import "header.css";
+@import "nav.css";
+@import "main.css";
+@import "footer.css";
+@import "login.css";
+@import "member.css";
+@import "menu.css";
+
+* {
+    color: #262525;
+}

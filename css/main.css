@@ -1,0 +1,31 @@
+.main {
+    width: 63%;
+    margin: 0 auto;
+}
+.main img {
+    width: 300px;
+    height: 380px;
+    margin: 5px;
+}
+
+.main img:hover {
+    opacity: 0.6;
+}
+
+.main p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*
+.main__best,
+.main__new,
+.main__sale,
+.main__top,
+.main__bottom,
+.main__suit {
+    display: none;
+}
+*/

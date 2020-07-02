@@ -1,0 +1,35 @@
+.user-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.user-info li {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #262525;
+}
+
+.header__logo {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.header__logo img {
+    width: 280px;
+    height: 200px;
+}
+
+.popup {
+    background-color:#f2622e;
+    color: white;
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    position: absolute;
+    top: 10px;
+}

@@ -1,0 +1,31 @@
+.main {
+    width: 63%;
+    margin: 0 auto;
+}
+
+.main__login {
+    width: 50%;
+    margin: 0 auto;
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+fieldset {
+    border: 2px solid #262525;
+    padding-top: 30px;
+}
+
+fieldset input[type="button"],
+fieldset input[type="reset"],
+fieldset input[type="submit"]
+ {
+    border: 1px solid #262525;
+    background-color: #262525;
+    color: white;
+}
+
+

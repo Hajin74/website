@@ -1,0 +1,284 @@
+﻿<!doctype html>
+<html>
+<head>
+	<title>JOIN | OREAL</title>
+	<link type = "text/css" rel = "stylesheet" href = "css/style.css"></link>
+    <script src="https://kit.fontawesome.com/ad7b30a9d7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <ul class="header_user-info user-info">
+            <a href="member.html">
+                <li class="user-info__join">
+                    <span class="join-icon">
+                        <i class="fas fa-users fa-2x"></i>
+                    </span><br>
+                    <span class="join-title">
+                        JOIN
+                    </span>
+                </li>
+            </a>
+            <a href="login.html">
+                <li class="user-info__login">
+                    <span class="login-icon">
+                        <i class="fas fa-sign-in-alt fa-2x"></i>
+                    </span><br>
+                    <span class="login-title">
+                        LOGIN
+                    </span>
+                </li>
+            </a>
+        </ul>
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="logo">  
+            </a>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="nav__search-bar">
+            <input type="text" placeholder="검색어를 입력하세요.  ex)후드티, 반팔티, 수트">
+            <input type="submit" value="검색">
+        </div>
+        <ul class="nav__menu-bar">
+            <li class="nav_menu" id="menu__best" onclick="show_best()">
+                BEST
+            </li>
+            <li class="nav_menu" id="menu__new" onclick="show_new()">
+                NEW
+            </li>
+            <li class="nav_menu" id="menu__sale" onclick="show_sale()">
+                SALE
+            </li>
+            <li class="nav_menu" id="menu__top" onclick="show_top()">
+                TOP
+            </li>
+            <li class="nav_menu" id="menu__bottom" onclick="show_bottom()">
+                BOTTOM
+            </li>
+            <li class="nav_menu" id="menu__suit" onclick="show_suit()">
+                SUIT
+            </li>
+        </ul>
+	</nav>
+	<center>
+		<table border cellspacing="10" cellpadding="10">
+			<form action = "member.jsp" method = "get" name = "joinForm" id = "joinForm">
+				<tbody>
+					<tr>
+						<td colspan="2">
+							<h2>회원가입</h2>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">아이디</td>
+						<td>
+							<input type = "text" name = "member_id" id = "member_id" required >
+							<input type = "button" name="id_check" onclick = "idCheck()" value = "중복검사"></input>
+							<script src = "test.js"></script>
+							<script>
+								function idCheck() {
+									var id = document.getElementById('member_id').value;
+									var same = 0;
+									for(var i = 0; i < 3; i++)
+									{
+										if(member_id[i] === id)
+										{
+											same = 1;
+											break;
+										}
+									}
+									
+									if(same === 1)
+									{
+										alert('중복된 아이디 입니다.');
+										joinForm.id.value = "";
+									}
+									else
+										alert('사용가능한 아이디 입니다.');
+								}
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">비밀번호</td>
+						<td>
+							<input type = "password" name = "member_pw" id = "member_pw" required>
+							<span>비밀번호 확인</span>
+							<input type = "password" name = "member_pw" id = "member_pw" required>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">이름</td>
+						<td>
+							<input type = "text" name = "member_name" id = "member_name" required>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">주민등록번호</td>
+						<td>
+							<input type = "text" name = "member_identification1" id = "member_identification1" maxlength = "6" size = "6" required>
+							<span>-</span>
+							<input type = "text" name = "member_identification2" id = "member_identification2" maxlength = "7" size = "7" required>
+							<input type = "button" name="idc_check" onclick = "noCheck()" value = "중복검사"></input>
+							<script>
+								function noCheck() {
+									var idc1 = document.getElementById('member_identification1').value;
+									var idc2 = document.getElementById('member_identification2').value;
+									
+									var same1 = 0, same2 = 0;
+									for(var i = 0; i < 3; i++)
+									{
+										if(member_no[i].substr(0,6) === idc1)
+										{
+											same1 = 1;
+											break;
+										}
+									}
+									for(var i = 0; i < 3; i++)
+									{
+										if(member_no[i].substr(7,8) === idc2)
+										{
+											same2 = 1;
+											break;
+										}
+									}
+									
+									
+									if(same1 === 1 && same2 === 1)
+									{
+										alert('중복된 주민등록번호 입니다.');
+										joinForm.idc1.value = "";
+										joinForm.idc2.value = "";
+									}
+									else
+										alert('사용가능한 주민등록번호 입니다.'); 
+										
+								}
+							</script>
+							<script>
+							&(document).ready(function(){
+								if(idc2.charAt(0) === 1 || idc2.charAt(0) === 3)
+									{
+										$("#male").checked;
+									}
+							});
+							</script>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">성별</td>
+						<td>
+							<input type = "radio" name = "member_sex" value = "F" checked>여성
+							<input type = "radio" name = "member_sex" value = "M" id = "male">남성
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">전화번호</td>
+						<td>
+							<input type = "text" list = "member_number" name = "member_number" size = "3">-
+							<datalist id = "member_number">
+								<option value = "02">02</option>
+								<option value = "064">064</option>
+								<option value = "031">031</option>
+							</datalist>
+							<input type = "text" name = "member_number" size = "4">-
+							<input type = "text" name = "member_number" size = "4">
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">휴대폰</td>
+						<td>
+							
+							<select name = "member_phone_number">
+								<option value = "010">010</option>
+								<option value = "011">011</option>
+								<option value = "012">012</option>
+							</select>
+							<input type = "text" name = "member_phone_number" size = "4">-
+							<input type = "text" name = "member_phone_number" size = "4">
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">주소</td>
+						<td>
+							<input type = "text" name = "member_address" size = "50">
+							<input type = "hidden" name = "member_detail_address">
+							<button type = "button" name="address_check" onclick = "alert('사용가능한 주소입니다.')" value = "주소찾기">주소찾기</button>
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">생년원일</td>
+						<td>
+							<input type = "text" name = "member_birthday" size = "4">년
+							<select name = "birthday">
+								<option value = "1">1월</option>
+								<option value = "2">2월</option>
+								<option value = "3">3월</option>
+								<option value = "4">4월</option>
+								<option value = "5">5월</option>
+								<option value = "6">6월</option>
+								<option value = "7">7월</option>
+								<option value = "8">8월</option>
+								<option value = "9">9월</option>
+								<option value = "10">10월</option>
+								<option value = "11">11월</option>
+								<option value = "12">12월</option>
+							</select>
+							<span>월</span>
+							<input type = "number" name = "member_birthday" size = "4" min = "1" max = "31">일
+						</td>
+					</tr>
+					<tr>
+						<td align = "center">회원소개</td>
+						<td>
+							<textarea rows = "5" cols = "50" placeholder = "당신의 소개를 적어주세요."></textarea>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan = "2" align = "center">
+							<input type = "submit" value = "가입하기"  onClick = "javascript:if(joinCheck()===true) submit()">
+							<script>
+								function joinCheck(){
+									var id = document.getElementById('member_id').value;
+									var pw = document.getElementById('member_pw').value;
+									var name = document.getElementById('member_name').value;
+									var idc1 = document.getElementById('member_identification1').value;
+									var idc2 = document.getElementById('member_identification2').value;
+									
+									while(id === "" || pw === "" || name === "" || member_identification1 === "" || member_identification2 === "")
+									{
+										if(id === "" || pw === "" || name === "" || member_identification1 === "" || member_identification2 === "")
+										{
+											alert('필수요소를 모두 입력하세요.');
+											joinForm.id = "";
+											joinForm.pw = "";
+											joinForm.name = "";
+											joinForm.idc1 = "";
+											joinForm.idc2 = "";
+											return false;
+										}
+										else
+										{
+											return true;
+										}
+									}
+								}
+							</script>
+							<input type = "reset" value = "재입력">
+						</td>
+					</tr>
+				</tbody>
+			</form>
+		</table>
+	</center>
+    <footer class="footer">
+        <div class="footer__info">
+            OREAL은 불필요한 신체 노출이 없고 여성세가 없는 진짜 여성을 위한 옷을 보여주는 홈페이지입니다.
+            <br>
+            [출처] 코지웨어, 킹스클로젯, 퓨즈서울, deepingray, 리가브, VVII
+        </div>
+    </footer>
+</body>
+</html>

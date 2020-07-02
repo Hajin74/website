@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ad7b30a9d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <title>OREAL</title>
+</head>
+<body>
+    <header class="header">
+        <ul class="header_user-info user-info">
+            <a href="member.html">
+                <li class="user-info__join">
+                    <span class="join-icon">
+                        <i class="fas fa-users fa-2x"></i>
+                    </span><br>
+                    <span class="join-title">
+                        JOIN
+                    </span>
+                </li>
+            </a>
+            <a href="login.html">
+                <li class="user-info__login">
+                    <span class="login-icon">
+                        <i class="fas fa-sign-in-alt fa-2x"></i>
+                    </span><br>
+                    <span class="login-title">
+                        LOGIN
+                    </span>
+                </li>
+            </a>
+            <span class="popup">!</span>
+        </ul>
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="logo">  
+            </a>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="nav__search-bar">
+            <input type="text" placeholder="검색어를 입력하세요.  ex)후드티, 반팔티, 수트">
+            <input type="submit" value="검색">
+        </div>
+        <ul class="nav__menu-bar">
+            <li class="nav_menu" id="menu__best" onclick="show_best()">
+                BEST
+            </li>
+            <li class="nav_menu" id="menu__new" onclick="show_new()">
+                NEW
+            </li>
+            <li class="nav_menu" id="menu__sale" onclick="show_sale()">
+                SALE
+            </li>
+            <li class="nav_menu" id="menu__top" onclick="show_top()">
+                TOP
+            </li>
+            <li class="nav_menu" id="menu__bottom" onclick="show_bottom()">
+                BOTTOM
+            </li>
+            <li class="nav_menu" id="menu__suit" onclick="show_suit()">
+                SUIT
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="main__best">
+            <p>BEST</p>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+            <a href="https://smartstore.naver.com/cozywear_/products/4882125814" class="best-img" target="_blank">
+                <img src="images/bottom1.jpg" alt="bottom1">
+            </a>
+        </div>
+        <div class="main__new">
+            <p>NEW</p>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+            <a href="https://www.kingscloset.co.kr/product/untitled-115" class="best-img" target="_blank">
+                <img src="images/bottom2.jpg" alt="bottom2">
+            </a>
+        </div>
+        <div class="main__sale">
+            <p>SALE</p>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+            <a href="https://smartstore.naver.com/le_gabe/products/4979493194" class="best-img" target="_blank">
+                <img src="images/bottom3.jpg" alt="bottom3">
+            </a>
+        </div>
+        <div class="main__top">
+            <p>TOP</p>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>
+            <a href="https://smartstore.naver.com/deepingray/products/4828973732" class="best-img" target="_blank">
+                <img src="images/top1.jpg" alt="top1">
+            </a>   
+        </div>
+        <div class="main__bottom">
+            <p>BOTTOM</p>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+            <a href="http://vvll561.com/product/detail.html?product_no=91&cate_no=59&display_group=1">
+                <img src="images/bottom4.jpg" alt="bottom4">
+            </a>
+        </div>
+        <div class="main__suit">
+            <p>SUIT</p>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+            <a href="http://fuseseoul.com/product/%ED%95%9C%EC%A0%95%ED%8C%90%EB%A7%A4%EB%A6%B0%EB%84%A8100%EB%B0%98%EB%B0%94%EC%A7%80-%EC%8A%AC%EB%9E%99%EC%8A%A4-beige/864/category/89/display/1/">
+                <img src="images/suit3.jpg" alt="suit3">
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__info">
+            OREAL은 불필요한 신체 노출이 없고 여성세가 없는 진짜 여성을 위한 옷을 보여주는 홈페이지입니다.
+            <br>
+            [출처] 코지웨어, 킹스클로젯, 퓨즈서울, deepingray, 리가브, VVII
+        </div>
+    </footer>
+</body>
+</html>
